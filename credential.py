@@ -13,7 +13,9 @@ class Credentials:
     
 
     def save_credentials(self): 
-        """method that saves credetials"""
+        """
+        method that saves credetials
+        """
         Credentials.credentials_list.append(self)
 
        
@@ -25,7 +27,9 @@ class Credentials:
         return cls.credentials_list
 
     def delete_credentials(self):
-        """method deletes credentials"""
+        """
+        method deletes credentials
+        """
         Credentials.credentials_list.remove(self)
 
     # @classmethod
