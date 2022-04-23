@@ -7,9 +7,9 @@ class User:
 
     user_list=[]
 
-    def __init__(self, locker_username,locker_password):
-        self.locker_username=locker_username
-        self.locker_password=locker_password
+    def __init__(self, username,password):
+        self.username=username
+        self.password=password
 
     def save_user(self): 
         """
@@ -31,4 +31,14 @@ class User:
         """
         User.user_list.remove(self)
 
+    @classmethod
+    def verify_user(cls,username, password):
+        """
+        method to verify whether the user is in our user_list or not
+        """
+        now_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                    now_user == user.username
+        return now_user
     

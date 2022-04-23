@@ -17,7 +17,35 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.locker_username,"lucy") 
         self.assertEqual(self.new_user.locker_password,"lucy1")
 
+    def test_save_user(self):
+        """
+        test if a new user instance  has been  saved
+        """
 
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list),1)
+
+
+    def test_delete_contact(self):
+        """tests if a user has been deleted succesfuly"""
+        self.new_user.save_user()
+        test_user= User("lucy","lucy1") 
+        test_user.save_user()
+
+        self.new_user.delete_user()
+        self.assertEqual(len(User.user_list),1)
+
+    def test_verify_user(self):
+        """
+        test to verify a user exists
+        """
+        self.new_user.save_user()
+        test_user = User("lucy","lucy1") 
+        test_user.save_user()
+
+        user_exists = User.verify_user("lucy")
+
+        self.assertTrue(user_exists)
 
 
 if __name__ == '__main__':

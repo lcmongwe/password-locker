@@ -35,24 +35,10 @@ class Credentials:
 
     
 
-    # @classmethod
-    # def auto_password(cls,user_name):
-    # """method that autogenerates password for user"""
     
 
+    
 
-    # @classmethod
-    # def set_password(cls,):
-    # """method lets the  user create their own password"""
-        
-
-    # @classmethod
-    # def contact_exist(cls,number):
-    #         for contact in cls.contact_list:
-    #             if contact.phone_number == number:
-    #                 return True
-
-    #         return False
-
+   
    
 
