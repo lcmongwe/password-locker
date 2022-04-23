@@ -17,18 +17,34 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.user_name,"lcmongwe") 
         self.assertEqual(self.new_credentials.password,"xyz") 
 
-        """tests if a credential has been saved to the list"""     
+           
     def test_save_credential(self):
+        """tests if a new credential has been created and saved correctly"""
         self.new_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
 
-        """tests if a new credential has been created and saved correctly"""
+        
     def test_save_new_credentials(self):
+        """tests if a new credential has been created and saved correctly"""
         self.new_credentials.save_credentials()
         test_credentilas = Credentials("tiktok","lucy","123") 
         test_credentilas.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)   
 
+    def test_display_credentials(self):
+        '''
+        method that returns a list of all credentials saved
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+    
+    def test_delete_credentials(self):
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("tiktok","lucy","123",) 
+        test_credentials.save_credentials()
+
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
 
 
 
