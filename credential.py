@@ -32,6 +32,9 @@ class Credentials:
         """
         Credentials.credentials_list.remove(self)
 
+
+    
+
     # @classmethod
     # def auto_password(cls,user_name):
     # """method that autogenerates password for user"""

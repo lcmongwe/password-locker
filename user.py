@@ -1,3 +1,5 @@
+from credential import Credentials
+
 class User:
     """
     this class generates a new user for the password locker account
@@ -14,5 +16,19 @@ class User:
         method that saves a new user
         """
         User.user_list.append(self)
-        
+
+    
+    @classmethod
+    def dispaly_user(cls):
+        '''
+        method that returns user details
+        '''
+        return cls.user_list
+
+    def delete_user(self):
+        """
+        method deletes a saved account
+        """
+        User.user_list.remove(self)
+
     
