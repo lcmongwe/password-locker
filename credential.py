@@ -33,6 +33,14 @@ class Credentials:
         Credentials.credentials_list.remove(self)
 
 
+    @classmethod
+    def find_credential(cls, app_name):
+        """
+        Method that takes in a app_name and returns a credential that app.
+        """
+        for credential in cls.credentials_list:
+            if credential.app_name == app_name:
+                return credential
     
 
     
