@@ -59,5 +59,16 @@ def test_find_credential(self):
         self.assertEqual(this_credential.app_name,test_credentials.app_name)
 
 
+def test_credential_exist(self):
+        """
+        test to check if we can return a true or false when we find or not find the credential.
+        """
+        self.new_credentials.save_credentials()
+        the_credentials = Credentials("tiktok", "lucy", "123")  
+        the_credentials.save_credentials()
+        credential_is_found = Credentials.if_credential_exist("tiktok")
+        self.assertTrue(credential_is_found)
+
+
 if __name__ == '__main__':
     unittest.main()
