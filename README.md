@@ -19,6 +19,8 @@ Author: Lucy Mongwe
 - git clone https://github.com/lcmongwe/password-locker.git
 - cd password-locker
 - code . or atom . depending on your text editor
+- chmod +x passwordLock.py
+- ./passwordLock.py
 
 ### :computer: TECHNOLOGIES USED
 
