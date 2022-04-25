@@ -41,7 +41,7 @@ def save_credentials(credentials):
     """
     function saves credentials to the list
     """
-    Credentials.save_credentials()
+    Credentials.save_credentials(credentials)
 
 def display_credentials():
     """
