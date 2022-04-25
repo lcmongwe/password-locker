@@ -2,6 +2,9 @@
 ### PROJECT NAME
 
 Password Locker
+## SCREENSHOT
+
+![DELANI STUDIO](passlock.png)
 
 ### :bulb: PROJECT DESCRIPTION
 
