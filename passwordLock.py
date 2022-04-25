@@ -41,9 +41,9 @@ def save_credentials(credentials):
     """
     function saves credentials to the list
     """
-    credentials.save_credentials()
+    Credentials.save_credentials()
 
-def display_accounts_details():
+def display_credentials():
     """
     function displays all saved credentials
     """
@@ -53,7 +53,7 @@ def delete_credentials(credentials):
     """
     function deletes saved credentials
     """
-    credentials.delete_credentials()
+    Credentials.delete_credentials()
 
 def find_credentials(app_name):
     """
@@ -110,9 +110,9 @@ def locker():
             print("Create New Credential")
             print("."*20)
             print("Account name ....")
-            account = input().lower()
+            app_name = input().lower()
             print("Your Account username")
-            username = input()
+            user_name = input()
             while True:
                 print(" TP - To type your own pasword if you already have an account:\n GP - To generate random Password")
                 choice = input().lower().strip()
@@ -124,19 +124,19 @@ def locker():
                     break
                 else:
                     print("Invalid password please try again")
-            save_credentials(create_new_credentials(account,username,password))
+            save_credentials(create_new_credentials(app_name,user_name,password))
             print('\n')
-            print(f"Account Credential for: {account} - UserName: {username} - Password:{password} created succesfully")
+            print(f"Account Credential for: {app_name} - UserName: {user_name} - Password:{password} created succesfully")
             print('\n')
         elif short_code == "dc":
-            if display_accounts_details():
+            if display_credentials():
                 print("Here's your list of accounts: ")
                  
                 print('*' * 30)
                 
-                for account in display_accounts_details():
-                    print(f" Account:{account.app_name} \n User Name:{username}\n Password:{password}")
-                    print('_'* 30)
+                for account in display_credentials():
+                    print(f" Account:{account.app_name} \n User Name:{account.user_name}\n Password:{account.password}")
+                    
                 print('*' * 30)
             else:
                 print("You don't have any credentials saved yet..........")
