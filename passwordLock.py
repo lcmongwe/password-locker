@@ -108,7 +108,7 @@ def locker():
         short_code = input().lower().strip()
         if short_code == "cc":
             print("Create New Credential")
-            print("."*20)
+            print("."*60)
             print("Account name ....")
             app_name = input().lower()
             print("Your Account username")
@@ -126,18 +126,18 @@ def locker():
                     print("Invalid password please try again")
             save_credentials(create_new_credentials(app_name,user_name,password))
             print('\n')
-            print(f"Account Credential for: {app_name} - UserName: {user_name} - Password:{password} created succesfully")
+            print(f"Account Credential for: {app_name}\n - UserName: {user_name}\n - Password:{password}\n created succesfully")
             print('\n')
         elif short_code == "dc":
             if display_credentials():
-                print("Here's your list of accounts: ")
+                print("Here's your list of your accounts: ")
                  
-                print('*' * 30)
+                print('*' * 60)
                 
                 for account in display_credentials():
                     print(f" Account:{account.app_name} \n User Name:{account.user_name}\n Password:{account.password}")
                     
-                print('*' * 30)
+                print('*' * 60)
             else:
                 print("You don't have any credentials saved yet..........")
         elif short_code == "fc":
@@ -146,9 +146,9 @@ def locker():
             if find_credentials(search_name):
                 search_credential = find_credentials(search_name)
                 print(f"Account Name : {search_credential.app_name}")
-                print('-' * 50)
-                print(f"User Name: {search_credential.user_name} Password :{search_credential.password}")
-                print('-' * 50)
+                print('-' * 60)
+                print(f"User Name: {search_credential.user_name}\n Password :{search_credential.password}")
+                print('-' * 60)
             else:
                 print("That Credential does not exist")
                 print('\n')
@@ -157,13 +157,16 @@ def locker():
             search_name = input().lower()
             if find_credentials(search_name):
                 search_credential = find_credentials(search_name)
-                print("_"*50)
+                print("*"*60)
                 search_credential.delete_credentials()
                 print('\n')
                 print(f"Your stored credentials for : {search_credential.app_name} successfully deleted!!!")
                 print('\n')
+                print("*"*60)
             else:
+                print("*"*60)
                 print("That Credential you want to delete does not exist in your store yet")
+                print("*"*60)
 
         elif short_code == 'gp':
 
