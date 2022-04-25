@@ -128,6 +128,7 @@ def locker():
             print('\n')
             print(f"Account Credential for: {app_name}\n - UserName: {user_name}\n - Password:{password}\n created succesfully")
             print('\n')
+
         elif short_code == "dc":
             if display_credentials():
                 print("Here's your list of your accounts: ")
@@ -140,6 +141,7 @@ def locker():
                 print('*' * 60)
             else:
                 print("You don't have any credentials saved yet..........")
+
         elif short_code == "fc":
             print("Enter the Account Name you want to search for")
             search_name = input().lower()
@@ -152,6 +154,7 @@ def locker():
             else:
                 print("That Credential does not exist")
                 print('\n')
+                
         elif short_code == "d":
             print("Enter the account name of the Credentials you want to delete")
             search_name = input().lower()
