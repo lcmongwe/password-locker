@@ -173,10 +173,12 @@ def locker():
             password = generate_password()
             print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
         elif short_code == 'ex':
-            print("Thanks for using passwords store manager.. See you next time!")
+            print("*"*60)
+            print("Thanks for using passwordLocker.. bye!")
+            print("*"*60)
             break
         else:
-            print("Wrong entry... Check your entry again and let it match those in the menu")
+            print("Wrong entry... Try Again!")
     else:
         print("Please enter a valid input to continue")
 
