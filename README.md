@@ -4,7 +4,7 @@
 Password Locker
 ## SCREENSHOT
 
-![DELANI STUDIO](passlock.png)
+![passwordlock](passlock.png)
 
 ### :bulb: PROJECT DESCRIPTION
 
